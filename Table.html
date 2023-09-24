@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table App By CODEWORK</title>
+</head>
+<body bgcolor="black" text="white">
+    <center>
+       
+
+        <h1 style="font-family: verdana;text-shadow: 3px 3px 5px red;">CODEWORK</h1>
+
+        <p>[Learn, Implement & Develop]</p>
+
+        <h2>Simple Number Table Application using HTML, CSS & Javascript.</h2>
+
+        <h3>Enter Table Number:</h3>
+        
+        <input style="padding: 10px;" type="number"  id="table">
+
+        <p>Note : Please give numbers greater than 0.</p>
+            
+
+        
+        <input type="button" onclick="showtable()"   value="Get Table" style="padding: 10px;">
+
+        <input type="reset" onclick="location.reload()"   value="Reset" style="padding: 10px;">
+        
+    </center>
+
+    <script>
+
+      
+        function showtable(){    
+
+
+            var i = document.getElementById('table').value;
+
+            if(i > 0)
+            {
+                 var ul = document.createElement("ul");       
+            
+            ul.setAttribute('style','list-style-type:none;text-align:center;font-size:25px;')
+
+            document.body.appendChild(ul);
+        
+            for(var j=1;j<=10;j++){
+                
+                var li = document.createElement("li");  
+                
+                
+                let textNode = document.createTextNode(`${i} x ${j} = ${i*j}`);
+
+                li.appendChild(textNode);
+                ul.appendChild(li);
+            }
+            }
+                        
+       }
+        
+    </script>
+    
+</body>
+</html>
