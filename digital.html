@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Digital Clock</title>
+</head>
+<style type="text/css">
+	#currenttime{
+		text-align: center;
+		font-family: Times new roman;
+		font-size: 9vw;
+
+	}
+	#showunit{
+		font-size: 6vw;
+		text-align: center;
+
+	}
+	div{
+		color: rgb(204,255,0);
+		background-color: black;
+		width: 50%;
+		margin: auto;
+		border-radius: 18px;
+		border: 9px solid rgb(204,255,0);
+		
+	}
+</style>
+<body>
+
+	<script type="text/javascript">
+		
+
+		function display_time()
+		{
+			var date = new Date()
+			var hour = date.getHours()
+			var minutes = date.getMinutes()
+			var seconds = date.getSeconds()
+
+			
+			document.getElementById('currenttime').innerHTML = hour+" : "+minutes+" : "+seconds
+
+			document.getElementById('showunit').innerHTML = "hr"+" : "+"min"+" : "+"sec"
+		}
+		
+		setInterval(display_time,1000)
+	</script>
+
+	<div>
+	<h1 id="currenttime"></h1>
+	<h1 id="showunit"></h1>
+	</div>
+
+</body>
+</html>
